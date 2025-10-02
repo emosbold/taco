@@ -79,6 +79,6 @@ Check out [some audio samples](https://github.com/majidAdibian77/persian-SV2TTS/
 ## License  
 This project is based on [Real-Time-Voice-Cloning](https://github.com/CorentinJ/Real-Time-Voice-Cloning),  
 which is licensed under the MIT License.  
-The modifications for Persian language support are © [YEAR] [YOUR NAME].  
+The modifications for Persian language support are © 2022 Adibian.  
 
   
