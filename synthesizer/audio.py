@@ -165,11 +165,13 @@ def _mel_to_linear(mel_spectrogram, hparams):
         _inv_mel_basis = np.linalg.pinv(_build_mel_basis(hparams))
     return np.maximum(1e-10, np.dot(_inv_mel_basis, mel_spectrogram))
 
-def _build_mel_basis(hparams):
-    assert hparams.fmax <= hparams.sample_rate // 2
-    return librosa.filters.mel(hparams.sample_rate, hparams.n_fft, n_mels=hparams.num_mels,
-                               fmin=hparams.fmin, fmax=hparams.fmax)
-
+return librosa.filters.mel(
+    sr=hparams.sample_rate, 
+    n_fft=hparams.n_fft, 
+    n_mels=hparams.num_mels,
+    fmin=hparams.fmin,  # Assuming these parameters were intended to be passed as keywords
+    fmax=hparams.fmax
+)
 def _amp_to_db(x, hparams):
     min_level = np.exp(hparams.min_level_db / 20 * np.log(10))
     return 20 * np.log10(np.maximum(min_level, x))
