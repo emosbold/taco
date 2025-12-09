@@ -55,9 +55,10 @@ def wav_to_mel_spectrogram(wav):
     Derives a mel spectrogram ready to be used by the encoder from a preprocessed audio waveform.
     Note: this not a log-mel spectrogram.
     """
+    # Corrected call (passing wav as first positional argument, then using keywords):
     frames = librosa.feature.melspectrogram(
-        wav,
-        sampling_rate,
+        y=wav, # Pass the waveform using the keyword argument 'y'
+        sr=sampling_rate, # Explicitly use 'sr' keyword
         n_fft=int(sampling_rate * mel_window_length / 1000),
         hop_length=int(sampling_rate * mel_window_step / 1000),
         n_mels=mel_n_channels
