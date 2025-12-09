@@ -6,8 +6,9 @@ through Unidecode. For other data, you can modify _characters. See TRAINING_DATA
 """
 _pad        = "_"
 _eos        = "~"
-_characters = "ءابتثجحخدذرزسشصضطظعغفقلمنهويِپچژکگیآۀأؤإئًَُّ!(),-.:;?  ̠،…؛؟‌٪#ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_–@+/\u200c"
+_characters = "ءابتثجحخدذرزسشصضطظعغفقلمنهويِپچژکگیآۀأؤإئًَُّ!(),-.:;? ̠،…؛؟‌٪#ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_–@+/\u200c"
 _other_symbols = ['!', '(', ')', '-', '.', ':', ';', '?']
 
 # Export all symbols:
-symbols = [_pad, _eos] + _characters + _other_symbols
+# FIX: Convert the string _characters into a list of characters using list(_characters)
+symbols = [_pad, _eos] + list(_characters) + _other_symbols
