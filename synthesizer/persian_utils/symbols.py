@@ -6,7 +6,7 @@ through Unidecode. For other data, you can modify _characters. See TRAINING_DATA
 """
 _pad        = "_"
 _eos        = "~"
-_characters = ['U', 'Q', 'G', 'AA', 'V', 'N', 'CH', 'R', 'KH', 'B', 'Z', 'SH', 'O', 'A', 'E', 'ZH', 'H', 'SIL', 'AH', 'S', 'D', 'J', 'L', 'F', 'K', 'I', 'T', 'P', 'M', 'Y']
+_characters = "ءابتثجحخدذرزسشصضطظعغفقلمنهويِپچژکگیآۀأؤإئًَُّ!(),-.:;?  ̠،…؛؟‌٪#ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_–@+/\u200c"
 _other_symbols = ['!', '(', ')', '-', '.', ':', ';', '?']
 
 # Export all symbols:
